@@ -2,7 +2,7 @@
 
 # 💼 Job Portal Engine
 
-A full-stack, responsive employment and recruitment platform powered by a clean Laravel MVC architecture, role-based workflows, and modern Tailwind CSS design[cite: 15].
+A full-stack, responsive employment and recruitment platform powered by a clean Laravel MVC architecture, role-based workflows, and modern Tailwind CSS design.
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=php,laravel,js,html,css,tailwind,mysql,vite&theme=dark" alt="Tech Stack Badges" />
@@ -12,7 +12,7 @@ A full-stack, responsive employment and recruitment platform powered by a clean 
 
 ---
 
-### 🌟 Key Features[cite: 15]
+### 🌟 Key Features
 
 * **Role-Based Access Control (RBAC):** Distinct dashboards and guarded routes for both Employers and Job Seekers.
 * **Job Posting & Lifecycle Management:** Comprehensive recruiter controls to create, publish, edit, and delete openings with structured requirements and salary parameters.
