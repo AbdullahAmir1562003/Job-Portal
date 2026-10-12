@@ -1,61 +1,55 @@
-# 💼 Job Portal — Full-Stack Employment & Recruitment Platform
+<div align="center">
 
-A modern, full-stack recruitment platform built with Laravel, Blade, and Tailwind CSS. Designed with role-based access control (RBAC) to serve two distinct user experiences: job seekers applying for positions and employers managing listings and applicants.
+# 💼 Job Portal Engine
 
----
+A full-stack, responsive employment and recruitment platform powered by a clean Laravel MVC architecture, role-based workflows, and modern Tailwind CSS design[cite: 15].
 
-## 🌟 Key Features
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=php,laravel,js,html,css,tailwind,mysql,vite&theme=dark" alt="Tech Stack Badges" />
+</p>
 
-### 🏢 For Employers
-* **Job Posting & Management:** Create, update, publish, and delete job openings with rich descriptions, requirements, and salary details.
-* **Applicant Tracking:** Review candidates, view submitted details, and track application pipelines.
-* **Role-Based Guards:** Dedicated middleware ensuring employer-only routes remain protected.
-
-### 👨‍💻 For Job Seekers
-* **Live Job Feed:** Search, browse, and filter available job postings across industries.
-* **Direct Applications:** Streamlined single-click application workflow.
-* **Application Dashboard:** Track the status of submitted applications in real time.
-
-### 🛡️ Authentication & Security
-* **Breeze-Powered Authentication:** Email verification, secure registration, password hashing (bcrypt), and password reset flows.
-* **CSRF & SQL Injection Protection:** Built-in Laravel CSRF token verification and Eloquent ORM parameter binding.
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+### 🌟 Key Features[cite: 15]
 
-### Backend & Architecture
-* **Framework:** [Laravel 11](https://laravel.com/) (PHP)
-* **ORM:** Eloquent ORM
+* **Role-Based Access Control (RBAC):** Distinct dashboards and guarded routes for both Employers and Job Seekers.
+* **Job Posting & Lifecycle Management:** Comprehensive recruiter controls to create, publish, edit, and delete openings with structured requirements and salary parameters.
+* **Candidate Application Pipeline:** Real-time job seeker application submissions and direct candidate tracking for employers.
+* **Modern Reactive Interface:** Sleek, accessible UI styled with Tailwind CSS, Blade components, and Vite-accelerated asset compilation.
+* **Enterprise Security Defaults:** Built-in protection against CSRF and SQL injection, paired with Laravel Breeze session authentication and bcrypt password hashing.
+
+---
+
+### 🛠️ Tech Stack
+
+* **Backend:** PHP & Laravel 11
+* **Frontend:** Laravel Blade Components & Tailwind CSS
+* **Build System:** Vite
 * **Database:** MySQL / SQLite
 * **Authentication:** Laravel Breeze
 
-### Frontend
-* **Templating:** Blade Components
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **Build Tool:** Vite
-
 ---
 
-## 📂 Project Architecture
+### 📂 Directory Overview
 
 ```text
 Job-Portal/
 ├── app/
 │   ├── Http/
-│   │   ├── Controllers/     # JobPostController, JobApplicationController, Auth
-│   │   ├── Middleware/      # EnsureUserIsEmployer & route protection
-│   │   └── Requests/        # Form validation rules
-│   └── Models/              # User, JobPost, JobApplication
+│   │   ├── Controllers/     # JobPostController, JobApplicationController, Breeze Auth
+│   │   ├── Middleware/      # EnsureUserIsEmployer & session guards
+│   │   └── Requests/        # Form validation handlers
+│   └── Models/              # User, JobPost, JobApplication Eloquent models
 ├── database/
-│   └── migrations/          # Schema migrations for users, jobs, applications
+│   └── migrations/          # Relational database schemas
 ├── resources/
 │   ├── views/
-│   │   ├── jobs/            # Job index, create, show, applicants views
-│   │   ├── layouts/         # Base application layouts (App & Guest)
-│   │   └── dashboard.blade.php
-│   └── css / js             # Tailwind & Vite frontend assets
+│   │   ├── jobs/            # Job board, application views, employer management
+│   │   └── layouts/         # Master Blade layout components
+│   └── css / js             # Tailwind configuration & Vite entrypoints
 ├── routes/
-│   ├── web.php              # Application web routes
-│   └── auth.php             # Authentication routes
+│   ├── web.php              # Web application routes
+│   └── auth.php             # Authentication route endpoints
 └── README.md
